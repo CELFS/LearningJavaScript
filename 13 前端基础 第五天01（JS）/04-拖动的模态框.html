@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="login-bg"></div>
+    <script>
+        // 1.获取元素
+        var login = document.querySelector('.login');
+        var mask = document.querySelector('.login-bg');
+        var link = document.querySelector('#link');
+        var closeBtn = document.querySelector('#cliseBin');
+        // 2.点击弹出层连接 link，让 mask 和 login 显示出来
+        link.addEventListener('click', function() {
+                mask.style.display = 'block';
+                ligin.style.display = 'block';
+            })
+            // 3.点击 closeBtn 隐藏 mask 和 login
+        closeBtn.addEventListener('click', function() {
+                mask.style.display = 'none';
+                ligin.style.display = 'none';
+            })
+            // 4.开始拖拽
+    </script>
+</body>
+
+</html>
