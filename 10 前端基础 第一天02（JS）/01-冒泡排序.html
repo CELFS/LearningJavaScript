@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 这种写法更符合双指针的思想，变相离题，或者由于 i 在前，条件语句自然写了前后
+        var Arr1 = [77, 2, 1, 5, 4, 3];
+        for (var i = 0; i < Arr1.length; i++) {
+            for (var j = 0; j < Arr1.length; j++) {
+                if (Arr1[j] > Arr1[i]) { // 抓一个 i，依次与后面的 j 位置比较
+                    var temp = Arr1[i];
+                    Arr1[i] = Arr1[j];
+                    Arr1[j] = temp;
+                } else {
+                    continue; // 若相等或符合顺序，则跳过
+                }
+            }
+        }
+        console.log(Arr1);
+
+        // // 这么写更符合冒泡排序的逻辑
+        // var Arr = [77, 2, 1, 5, 4];
+        // for (var i = 0; i < Arr.length; i++) {
+        //     for (var j = 0; j < Arr.length; j++) {
+        //         if (Arr[j] > Arr[j + 1]) { //似乎不懂判断是否越界
+        //             var temp = Arr[j];
+        //             Arr[j] = Arr[j + 1];
+        //             Arr[j + 1] = temp;
+        //         } else {
+        //             continue;
+        //         }
+        //     }
+        // }
+        // console.log(Arr);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

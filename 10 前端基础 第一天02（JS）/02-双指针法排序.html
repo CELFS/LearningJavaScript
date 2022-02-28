@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 双指针法改进
+        var Arr1 = [77, 2, 1, 5, 4];
+        for (var tail = 0; tail < Arr1.length; tail++) {
+            for (var head = 0; head < Arr1.length; head++) {
+                if (Arr1[head] > Arr1[tail]) {
+                    var temp = Arr1[tail];
+                    Arr1[tail] = Arr1[head];
+                    Arr1[head] = temp;
+                }
+                if (Arr1[head] === Arr1[tail]) {
+                    break;
+                }
+            }
+        }
+        console.log(Arr1);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
