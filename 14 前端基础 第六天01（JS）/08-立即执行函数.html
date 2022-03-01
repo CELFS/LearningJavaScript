@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. 立即执行函数：不需要调用，立马自己执行；【想起 lambda 表达式】
+        function fn() {
+            console.log(1);
+        }
+        fn(); //需调用
+
+        // 2. 写法 可传参
+        // (function() {})() 或者 (function(){}())【区别：调用括号的位置】
+        (function() {
+            console.log(2);
+        })(); //多个立即执行函数，需加分号
+
+        (function(a, b, c) {
+            console.log(a, b, c); // >>> 1 2 3
+            var num = 10;
+        })(1, 2, 3);
+        (function fnNameAsWell(a, b, c) {
+            console.log(a + b + c); // >>> 9
+            var num = 11; //局部变量，不与外部冲突
+        }(2, 3, 4));
+        // 3. 最大的作用：独立创建一个作用域，里面所有的变量都是局部变量，不会有命名冲突情况
+    </script>
+</body>
+
+</html>

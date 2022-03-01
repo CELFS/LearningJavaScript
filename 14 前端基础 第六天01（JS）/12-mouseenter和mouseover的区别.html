@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .w {
+            /* 均作用于父子元素，调试的时候忘记了 */
+            margin: auto;
+            margin-top: 100px;
+        }
+        
+        .father {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+        }
+        
+        .son {
+            position: absolute;
+            margin-top: 0;
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father w">
+        <div class="son w"></div>
+    </div>
+    <script>
+        var father = document.querySelector('.father');
+        var son = document.querySelector('.son');
+        // 1. mouseOver 只要经过元素就会触发
+        // father.addEventListener('mouseover', function() {
+        //     console.log(11);
+        // })
+        // 2. mouseenter 只会经过自身盒子触发————原因是没有冒泡概念
+        // 通常 mouseenter 与 mousleave 搭配使用，同样不冒泡
+        father.addEventListener('mouseenter', function() {
+            console.log(11);
+        })
+    </script>
+</body>
+
+</html>
